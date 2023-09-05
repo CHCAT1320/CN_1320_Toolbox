@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>字符加密工具</title>
+		<link rel="icon" href="../../img/favicon.ico">
+		<style>
+			*{
+			     padding: 0;
+			     margin: 0;
+			 }
+			 ul{
+			     list-style: none;
+			 }
+			 li{
+			     float: left;
+			     background-color: rgb(247, 247, 247);
+			 }
+			 a{
+			     padding: 0 0px;
+			     height: 20px;
+			     line-height: 22px;
+			     display: block;
+			     color: rgb(247, 247, 247);
+			     text-decoration: none;   
+			 }
+			#aa:hover{
+				background-color: #4FFF49;
+			}
+			body{
+				background-color: rgb(247, 247, 247);
+			}
+			button{
+				height: 40px;
+				border-radius: 5px;
+				font-size: 16px;
+				background-color: rgb(0, 255, 0);
+				border: 5px solid rgb(0, 255, 0);
+			}
+			@font-face {
+				font-family:cmdysj;
+				src: url("../../fonts/cmdysj.ttf");
+			}
+			*{
+				font-family: cmdysj;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="body">
+			<div style="text-align: center;">
+				<h1>字符加密工具v0.0.1</h1>
+			</div>
+			<div style="display: flex;margin-left: 120px;margin-top: 15px;">
+				<h4>程序：</h4>
+				<ul>
+					<li>
+						<a href="https://space.bilibili.com/1644970825" id="aa">
+							<h4 style="color: red;">CHCAT1320</h4>
+						</a>
+					</li>
+				</ul>
+				<h4>（由20230830制作）</h4>
+			</div>
+			<div style="text-align: center;margin-top: 15px;">
+				<h4>输入需要加密的字符(仅支持英文小写,支持空格)</h4>
+			</div>
+			<div style="text-align: center;margin-top: 15px;">
+				<textarea cols="30" rows="10" style="width: 400px;height: 100px;" id="text"></textarea>
+			</div>
+			<div style="text-align: center;margin-top: 15px;">
+				<button style="width: 70px;cursor: pointer;" onclick="ok()">确定</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/run.js"></script>
+</html>
