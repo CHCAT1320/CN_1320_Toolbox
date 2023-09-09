@@ -2,8 +2,78 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>赞助我</title>
+		<style>
+			body{
+				background-color: rgb(247, 247, 247);
+				margin: 0px;
+			}
+			#box{
+				position: absolute;
+				background-color: white;
+				width: 300px;
+				height: 300px;
+				text-align: center;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				margin: auto;
+				border-radius: 50px;
+				z-index: 2;
+			}
+			#body{
+				text-align: center;
+			}
+			#box1{
+				position: absolute;
+				background-color: rgba(0,0,0,0.5);
+				width: 300px;
+				height: 300px;
+				z-index: 1;
+				border-radius: 50px;
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				margin: auto;
+				margin-top: 190px;
+			}
+			button{
+				border-radius: 50px;
+				width: 120px;
+				height: 50px;
+				font-size: 18px;
+				border: 0;
+				cursor: pointer;
+			}
+			#wxbut{
+				margin-left: -130px;
+				background-color: #19ff00;
+			}
+			#afdbut{
+				position: absolute;
+				background-color: rgb(158, 119, 235);
+				margin-left: 10px;
+			}
+		</style>
 	</head>
-	<body>
+		<div id="body">
+			<div id="box">
+				<h4>选择赞助方式</h4>
+				<button id="wxbut" onclick="wx()">
+					<img src="img/wx.png" style="width: 40px;height: 35px;
+					margin-left: -20px;margin-top: -4px;position: absolute;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微信
+				</button>
+				<button id="afdbut">
+					<img src="img/afd.png" style="width: 40px;height: 35px;
+					margin-left: -15px;margin-top: -4px;position: absolute;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爱发电
+				</button>
+			</div>
+			<div id="box1"></div>
+		</div>
 	</body>
+	<script src="js/run.js"></script>
 </html>
