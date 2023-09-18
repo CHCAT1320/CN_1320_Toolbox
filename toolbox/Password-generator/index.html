@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>密码生成器</title>
+		<link rel="icon" href="../../img/favicon.ico">
+		<style>
+			@font-face {
+				font-family:"cmdysj";
+				src: url("../../fonts/cmdysj.ttf")format("truetype");
+			}
+			*{
+				font-family: cmdysj;
+				user-select: none;
+			}
+			*{
+			     padding: 0;
+			     margin: 0;
+			 }
+			 ul{
+			     list-style: none;
+			 }
+			 li{
+			     float: left;
+			     background-color: rgb(247, 247, 247);
+			 }
+			 a{
+			     padding: 0 0px;
+			     height: 20px;
+			     line-height: 22px;
+			     display: block;
+			     color: rgb(247, 247, 247);
+			     text-decoration: none;   
+			 }
+			#aa:hover{
+				background-color: #4FFF49;
+			}
+			button{
+				height: 40px;
+				border-radius: 5px;
+				font-size: 16px;
+				background-color: rgb(0, 255, 0);
+				border: 5px solid rgb(0, 255, 0);
+			}
+		</style>
+	</head>
+	<body id="body" style="margin: 0;background-color: rgb(247, 247, 247);">
+		<h1 align="center">复杂密码生成器v0.0.1</h1>
+		<div style="display: flex;margin-left: 120px;margin-top: 15px;">
+			<h4>程序：</h4>
+			<ul>
+				<li>
+					<a href="https://space.bilibili.com/1644970825" id="aa">
+						<h4 style="color: red;">CHCAT1320</h4>
+					</a>
+				</li>
+			</ul>
+			<!--<h4>&</h4>
+			<ul>
+				<li>
+					<a href="https://space.bilibili.com/3494378083453070">
+						<h4 style="color: red;">一袋白凉粉啊</h4>
+					</a>
+				</li>
+			</ul>-->
+			<h4>（由20230830制作）</h4>
+		</div>
+		<div style="text-align: center;">
+			<button style="margin-top: 15px;width: 60px;cursor: pointer;" onclick="ok()">生成</button>
+			<select name="weishu" id="xuanz" style="width: 70px;height: 39px;font-size: 120%;">
+				<option value="3">3位</option>
+				<option value="4">4位</option>
+				<option value="5">5位</option>
+				<option value="6">6位</option>
+				<option value="7">7位</option>
+				<option value="8">8位</option>
+				<option value="9">9位</option>
+				<option value="10">10位</option>
+			</select><br>
+			<div style="position: absolute;display: flex;margin-top: 15px;left: 26%;">
+				<h4>结果：</h4>
+				<input type="text" readonly="readonly" id="shuc">
+			</div><br><br>
+			<a href="in"></a>
+				<button style="margin-top: 10px;cursor: pointer;" onclick="xz()">下载密码（TXT文本）</button>
+				<script>
+					var CHCAT = [1, 2, 3, 4, 5, 6, 7, 8, 9, 
+					"a", "b","c","d","e","f","g","h","i","j","k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+					"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+					"!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "<", ">", "/", "?", "~"];
+					var aa = [];
+					
+					function ok() {
+					  var xuanze = document.getElementById("xuanz");
+					  var shuc = document.getElementById("shuc");
+					  if (parseInt(xuanze.value) === 3) {
+					    for (var i = 0; i < 3; i++) {
+					      aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+					    }
+					    var pw = aa.join('');
+					    shuc.value = pw;
+					  }else if (parseInt(xuanze.value) === 4) {
+					      for (var i = 0; i < 4; i++) {
+					        aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+					      }
+					      var pw = aa.join('');
+					      shuc.value = pw;
+					    }else if (parseInt(xuanze.value) === 5) {
+					      for (var i = 0; i < 5; i++) {
+					        aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+					      }
+					      var pw = aa.join('');
+					      shuc.value = pw;
+					    }else if (parseInt(xuanze.value) === 6) {
+					      for (var i = 0; i < 6; i++) {
+					        aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+					      }
+					      var pw = aa.join('');
+					      shuc.value = pw;
+					    }else if (parseInt(xuanze.value) === 7) {
+					      for (var i = 0; i < 7; i++) {
+					        aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+					      }
+					      var pw = aa.join('');
+					      shuc.value = pw;
+					    }else if (parseInt(xuanze.value) === 8) {
+					      for (var i = 0; i < 8; i++) {
+					        aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+					      }
+					      var pw = aa.join('');
+					      shuc.value = pw;
+					    }else if (parseInt(xuanze.value) === 9) {
+					      for (var i = 0; i < 9; i++) {
+					        aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+					      }
+					      var pw = aa.join('');
+					      shuc.value = pw;
+					    }else if (parseInt(xuanze.value) === 10) {
+					      for (var i = 0; i < 10; i++) {
+					        aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+					      }
+					      var pw = aa.join('');
+					      shuc.value = pw;
+					    }
+					}
+					function xz(){
+						var password = document.getElementById("shuc").value;
+						var element = document.createElement('a');
+									
+						element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("密码："+password));
+						element.setAttribute('download', '复杂密码生成器v0.0.1 by CHCAT1320 密码.txt');
+						element.style.display = 'none';
+									
+						document.body.appendChild(element);
+						element.click();
+						document.body.removeChild(element);
+					}
+				</script>
+		</div>
+		<div id="watermarkId"></div>
+	</body>
+	<script src="js/run.js"></script>
+</html>
