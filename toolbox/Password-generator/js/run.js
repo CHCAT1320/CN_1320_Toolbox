@@ -1,3 +1,10 @@
+var popo = document.getElementById("popo");
+var shelter=document.getElementById("shelter");
+window.onload = function() {
+	document.getElementById("popo").style.display = "none";
+	document.getElementById("shelter").style.display = "none";
+}
+  
   // body宽高
   let cw = 530,ch =670//1950 757
   let body = document.getElementById('body')
@@ -109,3 +116,96 @@
   };
   
   watermarkUtils({ watermark_txt: "@CHCAT1320", watermark_width: 120, watermark_fontsize: "14px" }, watermarkId);
+  
+  
+  var CHCAT = [1, 2, 3, 4, 5, 6, 7, 8, 9,
+  "a", "b","c","d","e","f","g","h","i","j","k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+  "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+  "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "+", "=", "[", "]", "{", "}", "|", ";", ":", ",", ".", "<", ">", "/", "?", "~"];
+  function ok() {
+    var aa = [];
+    var xuanze = document.getElementById("xuanz");
+    var shuc = document.getElementById("shuc");
+    if (parseInt(xuanze.value) === 3) {
+      for (var i = 0; i < 3; i++) {
+        aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+      }
+      var pw = aa.join('');
+      shuc.value = pw;
+    }else if (parseInt(xuanze.value) === 4) {
+        for (var i = 0; i < 4; i++) {
+          aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+        }
+        var pw = aa.join('');
+        shuc.value = pw;
+      }else if (parseInt(xuanze.value) === 5) {
+        for (var i = 0; i < 5; i++) {
+          aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+        }
+        var pw = aa.join('');
+        shuc.value = pw;
+      }else if (parseInt(xuanze.value) === 6) {
+        for (var i = 0; i < 6; i++) {
+          aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+        }
+        var pw = aa.join('');
+        shuc.value = pw;
+      }else if (parseInt(xuanze.value) === 7) {
+        for (var i = 0; i < 7; i++) {
+          aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+        }
+        var pw = aa.join('');
+        shuc.value = pw;
+      }else if (parseInt(xuanze.value) === 8) {
+        for (var i = 0; i < 8; i++) {
+          aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+        }
+        var pw = aa.join('');
+        shuc.value = pw;
+      }else if (parseInt(xuanze.value) === 9) {
+        for (var i = 0; i < 9; i++) {
+          aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+        }
+        var pw = aa.join('');
+        shuc.value = pw;
+      }else if (parseInt(xuanze.value) === 10) {
+        for (var i = 0; i < 10; i++) {
+          aa[i] = CHCAT[Math.floor(Math.random() * CHCAT.length)];
+        }
+        var pw = aa.join('');
+        shuc.value = pw;
+      }
+  }
+  function setStorage(){
+                  if(localStorage.counter){
+                      localStorage.counter=Number(localStorage.counter)+1;
+                  }else{
+                      localStorage.counter=1;
+                  }
+                  return localStorage.counter;
+              }
+              var counter=setStorage();
+  			var time=counter
+  			//console.log(time)
+  			var tips=document.getElementById('tips');
+  			tips.innerHTML="&nbsp"+"&nbsp"+"&nbsp"+ "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"你已经访问了"+counter+"次了"+"，小小的赞助一下作者可以吧！毕竟开发还是很辛苦的。";
+  function xz(){
+	  
+	  document.getElementById("popo").style.display = "block";
+	  document.getElementById("shelter").style.display = "block";
+	  tips.innerHTML="&nbsp"+"&nbsp"+"&nbsp"+ "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"你已经访问了"+counter+"次了"+"，小小的赞助一下作者可以吧！毕竟开发还是很辛苦的。";
+  }
+  function closepopo(){
+	  document.getElementById("popo").style.display = "none";
+	  document.getElementById("shelter").style.display = "none";
+  	var password = document.getElementById("shuc").value;
+  	var element = document.createElement('a');
+  				
+  	element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("密码："+password));
+  	element.setAttribute('download', '复杂密码生成器v0.0.2 by CHCAT1320 密码.txt');
+  	element.style.display = 'none';
+  				
+  	document.body.appendChild(element);
+  	element.click();
+  	document.body.removeChild(element);
+  }
