@@ -1,5 +1,5 @@
   // body宽高
-  let cw = 530,ch =670//1950 757
+  let cw = 550,ch =670//1950 757
   let body = document.getElementById('body')
   body.style.width = `${cw}px`
   body.style.height = `${ch}px`
@@ -31,7 +31,7 @@ function setStorage(){
             }
             var counter=setStorage();
 			var time=counter
-			console.log(time)
+			//console.log(time)
 			var tips=document.getElementById('tips');
 			tips.innerHTML="&nbsp"+"&nbsp"+"&nbsp"+ "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"下载器已经为你下载了"+counter+"次了"+"，小小的赞助一下作者可以吧！毕竟开发还是很辛苦的。";
 
@@ -43,6 +43,7 @@ window.onload = function() {
 	document.getElementById("video").style.display="none";
 	document.getElementById("popo").style.display = "none";
 	document.getElementById("shelter").style.display = "none";
+	document.getElementById("cw").style.display = "none";
 }
 function ok(){
 	var video=document.getElementById("video");
@@ -69,6 +70,22 @@ function ok(){
 	
 	document.getElementById("popo").style.display = "block";
 	document.getElementById("shelter").style.display = "block";
+	// 监听视频时间更新事件
+	video.addEventListener("timeupdate", function() {
+	  // 获取当前视频的进度时间
+	  var currentTime = video.currentTime;
+	
+	  // 判断视频进度时间是否为0:00
+	  if (currentTime === 0) {
+	    // 显示无效的ID
+	    document.getElementById("cw").style.display = "block";
+		document.getElementById("video").style.display = "none";
+	  } else {
+	    // 清空显示
+	    document.getElementById("cw").style.display = "none";
+		document.getElementById("video").style.display = "block";
+	  }
+	});
 	}
 	
 	
