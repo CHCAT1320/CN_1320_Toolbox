@@ -74,11 +74,32 @@
 				.fs{
 					filter: invert(100%);
 				}
+				@keyframes bodyxz {
+								    0% {
+								      transform: rotate(0deg);
+								    }
+											100%{
+												transform: rotate(360deg);
+											}
+								  }
+								  .two-zero-eight-five {
+								    animation: bodyxz 2s infinite linear;
+									cursor: url("2085.sb.png");
+								  }
+				/*江城子 . 程序员之歌
+				
+				十年生死两茫茫，写程序，到天亮。
+				千行代码，Bug何处藏。
+				纵使上线又怎样，朝令改，夕断肠。
+				
+				领导每天新想法，天天改，日日忙。
+				相顾无言，惟有泪千行。
+				每晚灯火阑珊处，夜难寐，加班狂。*/
 		</style>
 	</head>
 	<body style="margin: 0;background-color: rgb(247, 247, 247);">
 		<div id="body">
-			<h1 align="center">网易云音乐下载器 v0.0.2</h1>
+			<h1 align="center">网易云音乐下载器 v0.0.4</h1>
 			<div style="display: flex;margin-left: 120px;margin-top: 15px;">
 				<h4>程序：</h4>
 				<ul>
@@ -109,7 +130,7 @@
 			<div id="shelter">
 				<div id="popo" style="">
 					<p style="position: absolute;">提示：</p>
-					<p id="tips" style="margin-top: 30px; position: absolute;"></p>
+					<p id="tips" style="margin-top: 30px; position: absolute;"><noscript>傻逼你没开javascript</noscript></p>
 					<button style="margin-left: 220px;margin-top: 100px;" onclick="closepopo()" id="but1">下次一定</button>
 					<a href="https://afdian.net/a/CN_1320" style="text-decoration: none;">
 						<button style="width: 80px;position: absolute;margin-top: -40px;margin-left: 130px;" id="but2">当然可以</button>
@@ -122,7 +143,7 @@
 				</video>
 			</div>
 			<div style="text-align: center;margin-top: 15px;">
-				NetEase cloud music downloader v0.0.2 by CHCAT1320
+				NetEase cloud music downloader v0.0.4 by CHCAT1320
 			</div>
 		</div>
 		<div id="watermarkId"></div>

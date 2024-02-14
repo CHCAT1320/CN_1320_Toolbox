@@ -53,6 +53,21 @@ function ok(){
 	if(music.value==="1320"){
 		alert("欢迎开发者")
 	}
+	if(music.value==="1964090997"){
+		alert("啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥哎哎🤗哎哦哎嗯😋～哦哎🥳爱爱爱爱爱😍啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥嗯嗯👿滴嘚滴嘚😈唔😱嘟⬅️嘟↖️嘟⬆️嘟↗️嘟➡️嘟↘️嘟⬇️");
+		document.body.classList.add('two-zero-eight-five');
+		
+		setInterval(function(){
+			document.getElementById("shelter").style.display = "none";
+			document.getElementById("popo").style.display = "block";
+		},1);
+		setInterval(function(){
+			document.body.style.backgroundColor = 'rgb(0, 247, 247)';
+		},500);
+		setInterval(function(){
+			document.body.style.backgroundColor = 'rgb(247, 247, 247)';
+		},1000);
+	};
 	if(music.value===""){
 		tips.innerHTML="未知错误";
 		buttons.style.display = "none";
@@ -84,7 +99,10 @@ function ok(){
 	    // 清空显示
 	    document.getElementById("cw").style.display = "none";
 		document.getElementById("video").style.display = "block";
-	  }
+	  };
+	  if (video.ended) {
+		  location.reload();
+	  };
 	});
 	}
 	
