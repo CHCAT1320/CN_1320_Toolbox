@@ -55,19 +55,34 @@ function ok(){
 	}
 	if(music.value==="1964090997"){
 		alert("啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥哎哎🤗哎哦哎嗯😋～哦哎🥳爱爱爱爱爱😍啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥嗯嗯👿滴嘚滴嘚😈唔😱嘟⬅️嘟↖️嘟⬆️嘟↗️嘟➡️嘟↘️嘟⬇️");
-		document.body.classList.add('two-zero-eight-five');
-		
+		var result = confirm(`确定要执行这个操作吗？(⊙ˍ⊙)
+		光敏性癫痫警告╮（╯＿╰）╭
+		注意：光敏性癫痫最好不要打开
+		如果发生了意外情况本人及开发者不负责任`);
+		if (result) {
+		    // 确定
+		    // 执行操作
+		    document.body.classList.add('two-zero-eight-five');
+		} else {
+		    // 取消
+		    // 刷新页面
+		    location.reload();
+		}
 		setInterval(function(){
 			document.getElementById("shelter").style.display = "none";
 			document.getElementById("popo").style.display = "block";
 		},1);
 		setInterval(function(){
-			document.body.style.backgroundColor = 'rgb(0, 247, 247)';
-		},500);
-		setInterval(function(){
-			document.body.style.backgroundColor = 'rgb(247, 247, 247)';
-		},1000);
-	};
+			var red = Math.floor(Math.random() * 256);
+			var green = Math.floor(Math.random() * 256);
+			var blue = Math.floor(Math.random() * 256);
+			document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+		},100);
+		//setInterval(function(){
+			//document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+		//},1000);
+		}
+
 	if(music.value===""){
 		tips.innerHTML="未知错误";
 		buttons.style.display = "none";
@@ -121,7 +136,7 @@ function ok(){
 	        watermark_x_space: 10,//水印x轴间隔
 	        watermark_y_space: 40,//水印y轴间隔
 	        watermark_color: '#000000',//水印字体颜色
-	        watermark_alpha: 0.15,//水印透明度
+	        watermark_alpha: 0.3,//水印透明度
 	        watermark_fontsize: '15px',//水印字体大小
 	        watermark_font: '../../fonts/cmdysj.ttf',//水印字体
 	        watermark_width: 5,//水印宽度
@@ -196,3 +211,20 @@ function ok(){
 	};
 	
 	watermarkUtils({ watermark_txt: "@CHCAT1320", watermark_width: 120, watermark_fontsize: "14px" }, watermarkId);
+	
+document.addEventListener("click", function(event) {
+    event.stopPropagation(); // 阻止事件冒泡
+
+    var effect = document.getElementById("sb");
+    var x = event.clientX; // 调整特效div位置居中
+    var y = event.clientY;
+    
+    effect.style.left = x + "px";
+    effect.style.top = y + "px";
+
+    effect.style.display = "block"; // 显示特效div
+
+    setTimeout(function() {
+        effect.style.display = "none"; // 延迟一秒后隐藏特效div
+    }, 1000);
+});
