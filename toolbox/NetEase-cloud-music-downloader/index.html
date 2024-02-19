@@ -129,7 +129,7 @@
 			<div style="text-align: center;margin-top: 15px;">
 				<button style="width: 80px;cursor: pointer;" onclick="ok()">确定</button>
 			</div>
-			<h4 align="center" style="margin-top: 15px;" id="cw">提示：咦！出猫饼了！<br />无效的ID或未知错误</h4>
+			<h4 align="center" style="margin-top: 15px;" id="cw">提示：正在加载<br />无效的ID或未知错误</h4>
 			<div id="shelter">
 				<div id="popo" style="">
 					<p style="position: absolute;">提示：</p>
@@ -140,12 +140,20 @@
 					</a>
 				</div>
 			</div>
-			<div style="text-align: center;margin-top: 15px;">
+			<div style="text-align: center;margin-top: -70px;z-index: 100;">
 				<video class="fs" controls src="music #2574.wav" id="video" style="margin-top: 15px;">
 					无效的id`
 				</video>
-			</div>
-			<div style="text-align: center;margin-top: 15px;">
+				<div>
+				    <div style="position: relative;">
+				        <a href="javascript:void(0)" id="aaa" style="display: none; position: absolute;">
+				            <div style="display: none; margin-left: 310px; margin-top: -47px;" id="zhilian">
+				                <button>跳转到播放</button>
+				            </div>
+				        </a>
+				    </div>
+				</div>
+			<div style="text-align: center;margin-top: 80px;">
 				NetEase cloud music downloader v0.0.4 by CHCAT1320
 			</div>
 		</div>
@@ -154,4 +162,5 @@
 		<noscript>傻逼你没开javascript</noscript>
 	</body>
 	<script src="js/run.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
 </html>

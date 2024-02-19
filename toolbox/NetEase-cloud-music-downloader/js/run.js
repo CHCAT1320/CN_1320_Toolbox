@@ -92,13 +92,17 @@ function ok(){
 	}else{
 		button.innerHTML="下次一定"
 		document.getElementById("video").style.display="block";
+		document.getElementById("zhilian").style.display="block";
+		document.getElementById("aaa").style.display="block";
+		var aa = document.getElementById("aaa");
 		buttons.style.display = "block";
 		tips.innerHTML="&nbsp"+"&nbsp"+"&nbsp"+ "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"下载器已经为你下载了"+counter+"次了"+"，小小的赞助一下作者可以吧！毕竟开发还是很辛苦的。";
 	    var url="http://music.163.com/song/media/outer/url?id="+music.value+".mp3";
 		video.src=url;
+		aa.href = url;
 		video.load();
 		video.play();
-	}
+	};
 	
 	document.getElementById("popo").style.display = "block";
 	document.getElementById("shelter").style.display = "block";
@@ -112,10 +116,14 @@ function ok(){
 	    // 显示无效的ID
 	    document.getElementById("cw").style.display = "block";
 		document.getElementById("video").style.display = "none";
+		document.getElementById("zhilian").style.display = "none";
+		document.getElementById("aaa").style.display = "none";
 	  } else {
 	    // 清空显示
 	    document.getElementById("cw").style.display = "none";
 		document.getElementById("video").style.display = "block";
+		document.getElementById("zhilian").style.display = "block";
+		document.getElementById("aaa").style.display = "block";
 	  };
 	  if (video.ended) {
 		  location.reload();
