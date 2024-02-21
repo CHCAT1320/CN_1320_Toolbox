@@ -114,6 +114,7 @@ function ok(){
 	  // 判断视频进度时间是否为0:00
 	  if (currentTime === 0) {
 	    // 显示无效的ID
+		document.getElementById("cw").innerHTML="未知错误";
 	    document.getElementById("cw").style.display = "block";
 		document.getElementById("video").style.display = "none";
 		document.getElementById("zhilian").style.display = "none";
