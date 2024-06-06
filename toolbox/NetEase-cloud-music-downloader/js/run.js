@@ -1,4 +1,4 @@
-  // body宽高
+ // body宽高
   let cw = 550,ch =670//1950 757
   let body = document.getElementById('body')
   body.style.width = `${cw}px`
@@ -39,51 +39,85 @@ function closepopo(){
 	document.getElementById("popo").style.display = "none";
 	document.getElementById("shelter").style.display = "none";
 }
+var caidan = true
 window.onload = function() {
 	document.getElementById("video").style.display="none";
 	document.getElementById("popo").style.display = "none";
 	document.getElementById("shelter").style.display = "none";
 	document.getElementById("cw").style.display = "none";
+	
+    if(caidan === true){
+        document.getElementById("cdzt").innerHTML="彩蛋状态：true"
+		console.log(caidan)
+    }else{
+        document.getElementById("cdzt").innerHTML="彩蛋状态：false"
+		console.log(caidan)
+    }
+}
+
+function caidankaiguan(){
+	caidan = false
+    if(caidan === false){
+        document.getElementById("cdzt").innerHTML="彩蛋状态：fales"
+		console.log(caidan)
+    }else{
+        document.getElementById("cdzt").innerHTML="彩蛋状态：true"
+		console.log(caidan)
+    }
 }
 function ok(){
+	console.log(caidan)
 	var video=document.getElementById("video");
 	var music=document.getElementById("music-id");
 	var button=document.getElementById("but1");
 	var buttons=document.getElementById("but2");
-	if(music.value==="1320"){
-		alert("欢迎开发者")
+	if(caidan===true){
+		if(music.value==="1320"){
+			alert("欢迎开发者")
+		}
+		if(music.value==="1964090997"){
+			alert("啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥哎哎🤗哎哦哎嗯😋～哦哎🥳爱爱爱爱爱😍啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥嗯嗯👿滴嘚滴嘚😈唔😱嘟⬅️嘟↖️嘟⬆️嘟↗️嘟➡️嘟↘️嘟⬇️");
+			var result = confirm(`确定要执行这个操作吗？(⊙ˍ⊙)
+			光敏性癫痫警告╮（╯＿╰）╭
+			警告:请在使用前阅读
+			当暴露在特定光影图案或闪光光亮下时,有极小部分人群会引发癫痫。这种情形可能是由于某些未查出的癫痫症状引起,即使该人员并没有患癫痫病史也有可能造成此类病症。如果您的家人或任何家庭成员曾有过类似症状,请在进行使用前咨询您的医生或医师。如果您在使用过程中出现任何症状,包括头晕、目眩、眼部或肌肉抽搐、失去意识、失去方向感、抽搐或出现任何自己无法控制的动作,请立即停止使用并在继续使用前咨询您的医生或医师。
+			注意：光敏性癫痫最好不要打开
+			如果发生了意外情况本人及开发者不负责任`);
+			if (result) {
+				// 确定
+				// 执行操作
+				document.body.classList.add('two-zero-eight-five');
+			} else {
+				// 取消
+				// 刷新页面
+				location.reload();
+			}
+			setInterval(function(){
+				document.getElementById("shelter").style.display = "none";
+				document.getElementById("popo").style.display = "block";
+			},1);
+			setInterval(function(){
+				var red = Math.floor(Math.random() * 256);
+				var green = Math.floor(Math.random() * 256);
+				var blue = Math.floor(Math.random() * 256);
+				document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+			},100);
+			//setInterval(function(){
+				//document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+			//},1000);
+			}
+		if(music.value==="42210"){
+			var dxjcaidan = true
+			setInterval(function(){
+				document.body.style.backgroundImage = "url('./dxj.png')"
+			},500);
+			setInterval(function(){
+                document.body.style.backgroundColor = "yellow"
+				document.body.style.backgroundImage = ""
+            },1000);
+			
+		}
 	}
-	if(music.value==="1964090997"){
-		alert("啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥哎哎🤗哎哦哎嗯😋～哦哎🥳爱爱爱爱爱😍啊🤪～啊🤪～啊咦😬啊咦😬啊→啊↑啊↓😨啊😰～嗯💥嗯嗯👿滴嘚滴嘚😈唔😱嘟⬅️嘟↖️嘟⬆️嘟↗️嘟➡️嘟↘️嘟⬇️");
-		var result = confirm(`确定要执行这个操作吗？(⊙ˍ⊙)
-		光敏性癫痫警告╮（╯＿╰）╭
-		警告:请在使用前阅读
-		当暴露在特定光影图案或闪光光亮下时,有极小部分人群会引发癫痫。这种情形可能是由于某些未查出的癫痫症状引起,即使该人员并没有患癫痫病史也有可能造成此类病症。如果您的家人或任何家庭成员曾有过类似症状,请在进行游戏前咨询您的医生或医师。如果您在游戏过程中出现任何症状,包括头晕、目眩、眼部或肌肉抽搐、失去意识、失去方向感、抽搐或出现任何自己无法控制的动作,请立即停止使用并在继续使用前咨询您的医生或医师。
-		注意：光敏性癫痫最好不要打开
-		如果发生了意外情况本人及开发者不负责任`);
-		if (result) {
-		    // 确定
-		    // 执行操作
-		    document.body.classList.add('two-zero-eight-five');
-		} else {
-		    // 取消
-		    // 刷新页面
-		    location.reload();
-		}
-		setInterval(function(){
-			document.getElementById("shelter").style.display = "none";
-			document.getElementById("popo").style.display = "block";
-		},1);
-		setInterval(function(){
-			var red = Math.floor(Math.random() * 256);
-			var green = Math.floor(Math.random() * 256);
-			var blue = Math.floor(Math.random() * 256);
-			document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-		},100);
-		//setInterval(function(){
-			//document.body.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
-		//},1000);
-		}
 
 	if(music.value===""){
 		tips.innerHTML="未知错误";
@@ -97,7 +131,11 @@ function ok(){
 		var aa = document.getElementById("aaa");
 		buttons.style.display = "block";
 		tips.innerHTML="&nbsp"+"&nbsp"+"&nbsp"+ "&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"下载器已经为你下载了"+counter+"次了"+"，小小的赞助一下作者可以吧！毕竟开发还是很辛苦的。";
-	    var url="http://music.163.com/song/media/outer/url?id="+music.value+".mp3";
+		if(dxjcaidan===true){
+			var url = "./dxj.mp3"
+		}else{
+			var url = "http://music.163.com/song/media/outer/url?id="+music.value+".mp3";
+		}
 		video.src=url;
 		aa.href = url;
 		video.load();
