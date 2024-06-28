@@ -181,8 +181,8 @@ function ok(){
 	        watermark_x: 0,//水印起始位置x轴坐标
 	        watermark_y: 20,//水印起始位置Y轴坐标
 	        watermark_rows: 1000,//水印行数
-	        watermark_cols: 1000,//水印列数
-	        watermark_x_space: 10,//水印x轴间隔
+	        watermark_cols: 5,//水印列数
+	        watermark_x_space: 0,//水印x轴间隔
 	        watermark_y_space: 40,//水印y轴间隔
 	        watermark_color: '#000000',//水印字体颜色
 	        watermark_alpha: 0.3,//水印透明度
