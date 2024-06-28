@@ -11,11 +11,9 @@
 还有其他功能等你探索！
 
 ## 近日更新
-NetEase cloud music downloader (`v0.0.4.5`)
-1.更新了大香蕉彩蛋
+NetEase cloud music downloader (`v0.0.5`)
+1.更新搜索歌曲功能
 
-2.更新了彩蛋开关
-    可关闭彩蛋
 ## 技术
 随便用，前提标明出处和作者
 
