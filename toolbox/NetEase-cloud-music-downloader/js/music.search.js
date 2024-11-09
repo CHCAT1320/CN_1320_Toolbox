@@ -1,8 +1,8 @@
 function MusicSearch(){
     // 获取搜索关键词
     var keyword = document.getElementById('searchInput').value;
-    // 定义要获取数据的URL
-const url = 'https://163.sipc-api.top/search?keywords='+keyword;
+    // 定义要获取数据的URLhttps://ilygfw-musicapi.voyage200.top/search?keywords=we
+const url = 'https://ilygfw-musicapi.voyage200.top/search?keywords='+keyword;
 
 // 获取下拉选择框的引用
 const songSelector = document.getElementById('songSelector');
@@ -33,7 +33,7 @@ xhr.onload = function() {
         songs.forEach(song => {
             const option = document.createElement('option');
             option.value = song.id;
-            option.textContent = song.name + "作曲："+song.artists[0].name;
+            option.textContent = song.name + "作曲：" + song.artists[0].name;
             songSelector.appendChild(option);
         });
     } else {
